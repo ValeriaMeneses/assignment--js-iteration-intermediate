@@ -10,8 +10,23 @@
  *    sumDigits(1112) => 5
  *    sumDigits(406) => 10
  **/
+ function sumDigits(numbers) {
+  // console.log(numbers);
+   var sum=0
+   numbers = numbers.toString();
+   var arrayNumbers = numbers.split('')
+  //  console.log(arrayNumbers);
+    for (var i = 0; i < arrayNumbers.length; i++) {
+      var intArray = parseInt(arrayNumbers[i])
+      if (intArray > 0) {
+        sum = sum + intArray
+      }
+    }
+// console.log(sum);
+return sum
+ }
 
-console.group('JS Iterations Week');
+// console.group('JS Iterations Week');
   console.log('%cFunction: sumDigits', 'background-color: green; color: white')
   console.groupCollapsed('Should return 6 from "123"');
     console.assert(sumDigits(123) === 6)

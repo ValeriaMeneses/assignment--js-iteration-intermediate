@@ -4,7 +4,19 @@
  * Write a function called `hasDoubleLetters` that takes a string as
  *
 **/
+function hasDoubleLetters(stringInput) {
+  // console.log(stringInput);
+  stringInput = stringInput.toLowerCase()
 
+  for (var i = 0; i < stringInput.length; i++) {
+    if (stringInput[i] === stringInput[i+1]) {
+      // console.log(true);
+      return true
+    }
+  }
+  // console.log(false);
+  return false
+}
 console.group('JS Iterations Week');
   console.log('%cFunction: hasDoubleLetters', 'background-color: green; color: white')
   console.groupCollapsed('Should return true for "shutter"');
